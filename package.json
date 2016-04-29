@@ -1,6 +1,6 @@
 {
   "name": "set-getter",
-  "description": "Define a cached property getter on an object.",
+  "description": "Create nested getter properties and any intermediary dot notation (`'a.b.c'`) paths",
   "version": "0.1.0",
   "homepage": "https://github.com/doowb/set-getter",
   "author": "Brian Woodward (https://github.com/doowb)",

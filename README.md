@@ -1,6 +1,6 @@
 # set-getter [![NPM version](https://img.shields.io/npm/v/set-getter.svg?style=flat)](https://www.npmjs.com/package/set-getter) [![NPM downloads](https://img.shields.io/npm/dm/set-getter.svg?style=flat)](https://npmjs.org/package/set-getter) [![Build Status](https://img.shields.io/travis/doowb/set-getter.svg?style=flat)](https://travis-ci.org/doowb/set-getter)
 
-> Define a cached property getter on an object.
+> Create nested getter properties and any intermediary dot notation (`'a.b.c'`) paths
 
 ## Install
 

@@ -14,24 +14,9 @@ var toPath = require('to-object-path');
  *
  * ```js
  * var obj = {};
- *
- * // root level property
  * getter(obj, 'foo', function() {
  *   return 'bar';
  * });
- * // obj.foo === 'bar'
- *
- * // property dot notation
- * getter(obj, 'bar.baz', function() {
- *   return 'qux';
- * });
- * // obj.bar.baz === 'qux'
- *
- * // property array notation
- * getter(obj, ['beep', 'boop'], function() {
- *   return 'bop';
- * });
- * // obj.beep.boop === 'bop'
  * ```
  * @param {Object} `obj` Object to add property to.
  * @param {String|Array} `prop` Property string or array to add.

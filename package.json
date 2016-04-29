@@ -19,9 +19,11 @@
   "scripts": {
     "test": "mocha"
   },
-  "dependencies": {},
+  "dependencies": {
+    "to-object-path": "^0.3.0"
+  },
   "devDependencies": {
-    "gulp-format-md": "*",
+    "gulp-format-md": "^0.1.9",
     "mocha": "^2.4.5"
   },
   "keywords": [],

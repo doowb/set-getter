@@ -28,15 +28,20 @@
   },
   "keywords": [],
   "verb": {
-    "layout": "default",
     "plugins": [
       "gulp-format-md"
     ],
-    "related": {
-      "list": []
-    },
     "reflinks": [
-      "verb"
-    ]
+      "verb",
+      "set-value"
+    ],
+    "layout": "default",
+    "toc": false,
+    "tasks": [
+      "readme"
+    ],
+    "lint": {
+      "reflinks": true
+    }
   }
 }

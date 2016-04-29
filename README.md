@@ -16,9 +16,38 @@ $ npm install set-getter --save
 var getter = require('set-getter');
 ```
 
+set-getter works like [set-value](https://github.com/jonschlinkert/set-value) by adding a property to an object or an object hierarchy using dot notation. The main difference is that the property is added using `Object.defineProperty` and is expected to be a getter function that returns a value.
+
+**Example**
+
+```js
+var obj = {};
+
+// root level property
+getter(obj, 'foo', function() {
+  return 'bar';
+});
+console.log(obj.foo);
+//=> 'bar'
+
+// property dot notation
+getter(obj, 'bar.baz', function() {
+  return 'qux';
+});
+console.log(obj.bar.baz);
+//=> 'qux'
+
+// property array notation
+getter(obj, ['beep', 'boop'], function() {
+  return 'bop';
+});
+console.log(obj.beep.boop);
+//=> 'bop'
+```
+
 ## API
 
-### [setGetter](index.js#L42)
+### [setGetter](index.js#L27)
 
 Defines a getter function on an object using property path notation.
 
@@ -32,24 +61,9 @@ Defines a getter function on an object using property path notation.
 
 ```js
 var obj = {};
-
-// root level property
 getter(obj, 'foo', function() {
   return 'bar';
 });
-// obj.foo === 'bar'
-
-// property dot notation
-getter(obj, 'bar.baz', function() {
-  return 'qux';
-});
-// obj.bar.baz === 'qux'
-
-// property array notation
-getter(obj, ['beep', 'boop'], function() {
-  return 'bop';
-});
-// obj.beep.boop === 'bop'
 ```
 
 ## Contributing

@@ -1,0 +1,40 @@
+{
+  "name": "set-getter",
+  "description": "Define a cached property getter on an object.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/doowb/set-getter",
+  "author": "Brian Woodward (https://github.com/doowb)",
+  "repository": "doowb/set-getter",
+  "bugs": {
+    "url": "https://github.com/doowb/set-getter/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-format-md": "*",
+    "mocha": "^2.4.5"
+  },
+  "keywords": [],
+  "verb": {
+    "layout": "default",
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": []
+    },
+    "reflinks": [
+      "verb"
+    ]
+  }
+}

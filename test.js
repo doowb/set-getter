@@ -94,4 +94,38 @@ describe('set-getter', function() {
     assert.equal(obj.foo.bar, 'beep');
     assert.equal(obj.foo.baz, 'boop');
   });
+
+  it('should not pollute the prototype when using dot notation', function() {
+    var obj = {};
+
+    assert(!('polluted' in {}));
+    assert(!('polluted' in obj));
+
+    getter(obj, '__proto__.polluted', function() {
+      return true;
+    });
+
+    assert(!('polluted' in {}));
+    assert(!('polluted' in obj));
+
+    assert({}.polluted !== true);
+    assert(obj.polluted !== true);
+  });
+
+  it('should not pollute the prototype when using array notation', function() {
+    var obj = {};
+
+    assert(!('polluted' in {}));
+    assert(!('polluted' in obj));
+
+    getter(obj, ['__proto__', 'polluted'], function() {
+      return true;
+    });
+
+    assert(!('polluted' in {}));
+    assert(!('polluted' in obj));
+
+    assert({}.polluted !== true);
+    assert(obj.polluted !== true);
+  });
 });

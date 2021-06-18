@@ -106,10 +106,10 @@ describe('set-getter', function() {
     });
 
     assert(!('polluted' in {}));
-    assert(!('polluted' in obj));
+    assert('polluted' in obj);
 
     assert({}.polluted !== true);
-    assert(obj.polluted !== true);
+    assert(obj.polluted === true);
   });
 
   it('should not pollute the prototype when using array notation', function() {
@@ -123,9 +123,9 @@ describe('set-getter', function() {
     });
 
     assert(!('polluted' in {}));
-    assert(!('polluted' in obj));
+    assert('polluted' in obj);
 
     assert({}.polluted !== true);
-    assert(obj.polluted !== true);
+    assert(obj.polluted === true);
   });
 });
